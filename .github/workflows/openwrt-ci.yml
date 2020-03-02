@@ -53,10 +53,6 @@ jobs:
 
           df -h
 
-      - name: SSH connection to Actions
-        uses: P3TERX/debugger-action@master
-         if: env.SSH_ACTIONS == 'true'
-
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
